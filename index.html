@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="left">
+                <div class="point"></div>
+                <div class="name"> <a href="">
+                        <h1>Aashish Mishra</h1>
+                    </a></div>
+                <div class="work">Computer Science Undergraduate</div>
+            </div>
+            <div class="right">
+                <div class="outreach manu"><a href="">Outreach</a></div>
+                <div class="personal manu"><a href="">Personal</a></div>
+                <div class="contact manu"><a href="./contact.html">Contact</a></div>
+                <div class="resume manu"><a href="./Aashish_resume.pdf" download="">resume</a></div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="mid1" id="mid11">
+                <div class="image"><img src="./myPhoto.jpeg" alt="myPhoto"></div>
+                <div class="info">
+                    <h1>Aashish Mishra</h1>
+                    <h4>A bit about me</h4>
+                    <p>I'm an undergraduage student</p>
+                    <p>at National Institute of technology, Patna</p>
+                    <p>in the Deparment of Computer Science and Technology</p>
+                    <p>i'm a tech enthusiast </p>
+                    <p>and want to work a software engineer</p>
+                </div>
+            </div>
+            <div class="link">
+                <a class="middiv div1" href="">Outreach</a>
+                <a class="middiv div2" href="">Personal</a>
+                <a class="middiv div3" href="./contact.html">Contact</a>
+                <a class="middiv div4" href="./Aashish_resume.pdf" download="">resume</a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer">
+            <div class="email foot">
+                <p>Email</p>
+                <span>mishraashish8863@gmil.com</span>
+            </div>
+            <div class="github foot">
+                <p>Github</p>
+                <a href="https://github.com/Aashishmishranitp">https://github.com/</a>
+            </div>
+            <div class="linkedin foot">
+                <p>Linkedin</p>
+                <a href="https://www.linkedin.com/in/aashish-mishra-687466257/">https://www.linkedin.com/</a>
+            </div>
+            <div class="copywrite foot" id="copyright">
+                <span> &copy; <span id="currentYear"></span> Aashish Mishra. </span>
+                <span>All rights reserved.</span>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('currentYear').textContent = currentYear;
+
+        // Function to check screen size and remove class if less than 780px
+function checkScreenSize() {
+  const screenSize = window.matchMedia('(max-width: 780px)');
+
+  // Check if the screen size is less than 780px
+  if (screenSize.matches) {
+    const element = document.getElementById('mid11');
+
+    // Remove the class if it exists
+    if (element.classList.contains('mid1')) {
+      element.classList.remove('mid1');
+    }
+  }
+}
+
+// Run the function initially to handle the class based on screen size on page load
+checkScreenSize();
+
+// Add an event listener to check for changes in screen size
+window.addEventListener('resize', checkScreenSize);
+
+    </script>
+
+</body>
+
+</html>
