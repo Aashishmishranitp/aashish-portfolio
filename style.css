@@ -6,22 +6,24 @@
     font-family: 'Montserrat';
 
 }
-/* .main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-} */
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     width: 100 vw;
-    height: 100 vh;
+    /* height: 100 vh; */
+    /* background-color: #252525; */
+    /* color: white; */
 }
  /* nav setion css  */
 .header {
-    height: 15vh;
+    height: 10vh;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     flex-wrap:wrap;
+    background-color: #252525;
 }
  .point {
     width: 3vh;
@@ -35,7 +37,7 @@ body {
     justify-content: center;
     text-decoration: none;
     font-family: 'Montserrat';
-    color: #252525;
+    color: white;
   
   }
 .left {
@@ -48,7 +50,7 @@ body {
  }
 
  .right {
-    margin-right: 3vw;
+    margin-right: 5vw;
     margin-top: 3vh;
     display: flex;
     justify-content: space-evenly;
@@ -60,7 +62,7 @@ body {
     justify-content: center;
     font-family: 'Montserrat';
     align-items: center;
-    color: #252525;
+    color: white;
     font-size: 2vh;
     flex-wrap: wrap;
 
@@ -74,14 +76,19 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
-.manu > a {
+.manu  a {
+    width: 100%;
     text-decoration: none;
-    color: #252525;
+    color: white;
     font-family: 'Montserrat';
     font-size: 1.2rem;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
-.manu > a:hover {
+.manu  a:hover {
     color: #2A9192;
 }
 .personal {
@@ -97,18 +104,40 @@ body {
    
    }
    
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.332);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+
+}
+.sidebar li {
+    width: 100%;
+}
 
 /* hero section css */
 .hero {
-    height: 70vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
+    background: linear-gradient(to right, rgba(245, 245, 245, 0.448), rgba(245, 245, 245, 0.218)), url(./image/common-bg.svg);
+    background-repeat:no-repeat;
+    
+
+
+    
 }
      /* hero left */
-     .image > img {
+     .image img {
         width: 450px;
         height: 450px;
         border-radius: 50%;
@@ -180,6 +209,7 @@ body {
 hr {
     margin-left: 4vw;
     margin-right: 4vw;
+    /* height: 6px; */
 }
 .footer {
     height: 15vh;
@@ -209,9 +239,15 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
-    .right {
+
+    .hidItem {
         display: none;
     }
+    .work
+    {
+        display: none;
+    }
+
     .image > img {
         width: 300px;
         height: 300px;
@@ -219,15 +255,15 @@ hr {
     }
     .header {
         height: 15vh;
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        flex-wrap:wrap;
+        align-items: center;
     }
     
     .hero {
         height: 800px;
-        width: 360px;
+        /* width: 360px; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -235,7 +271,7 @@ hr {
     }
     .footer {
         height: 15vh;
-        width: 100vw;
+        /* width: 100vw; */
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -253,3 +289,139 @@ hr {
         align-items: center;
     }
 }
+@media screen and (max-width: 400px){
+   .sidebar {
+    width: 100%;
+
+   }
+}
+@media screen and (min-width: 787px) {
+    .menuO {
+        display: none;
+    }
+}
+
+/* project section */
+
+
+.project {
+    margin: 2vw 5vw;
+    background-color: #d0f0f16f;
+}
+
+.ph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.podd {
+    display: flex;
+    gap: 10px;
+}
+
+
+.images {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.images  img {
+    width: 45vw;
+    height: 50vh;
+}
+.text {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.peven {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: flex-end; */
+    gap: 2rem;
+}
+
+
+.cnt {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+form {
+    min-width: 25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  form .title {
+    font-family: "Pacifico", cursive;
+    color: #212529;
+    font-size: 2.5rem;
+  }
+  form .form-control {
+    background-color: #f2f6f8;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+  }
+  form .form-control.thick {
+    height: 3.3rem;
+    padding: 0.5rem 3.5rem;
+  }
+  form .form-control:focus {
+    background-color: #f2f6f8;
+    border: none;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+  }
+  form .message .form-control {
+    padding: 0.5rem 1.8rem;
+  }
+  form ::placeholder {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #838788;
+    position: relative;
+    left: 0;
+  }
+  form input,
+  form textarea {
+    font-family: "Quicksand", sans-serif;
+    color: #212529;
+    font-size: 1.1rem;
+  }
+  form .icon {
+    color: #57565c;
+    height: 1.3rem;
+    position: absolute;
+    left: 1.5rem;
+    top: 1.1rem;
+  }
+  
+  .btn.btn-primary {
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 3rem;
+    border: 0;
+    border-radius: 3rem;
+    background-image: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
+    background-size: 300% 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn.btn-primary:hover:enabled {
+    box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
+    background-size: 100% 100%;
+    transform: translateY(-0.15em);
+  }
